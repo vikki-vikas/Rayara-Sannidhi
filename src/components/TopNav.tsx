@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname } from 'next/navigation';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
 
 type Locale = 'en' | 'kn';
 
@@ -43,21 +44,21 @@ export function TopNav({
       <div className="mx-auto flex w-full max-w-[1440px] items-end justify-between gap-2 px-3 pb-3 pt-[88px] sm:gap-8 sm:px-8 sm:pt-[104px] lg:h-[150px] lg:items-end lg:gap-12 lg:px-[50px] lg:pb-6 lg:pt-6">
         <div className="flex items-center gap-3 whitespace-nowrap leading-[normal] sm:gap-6 lg:gap-[51px]">
           <a
-            href={`/${currentLocale}`}
+            href={asset(`/${currentLocale}/`)}
             className={linkClass('')}
             aria-current={currentRoute === '' ? 'page' : undefined}
           >
             {dict.nav.home}
           </a>
           <a
-            href={`/${currentLocale}/about`}
+            href={asset(`/${currentLocale}/about/`)}
             className={linkClass('about')}
             aria-current={currentRoute === 'about' ? 'page' : undefined}
           >
             {dict.nav.about}
           </a>
           <a
-            href={`/${currentLocale}/contact`}
+            href={asset(`/${currentLocale}/contact/`)}
             className={linkClass('contact')}
             aria-current={currentRoute === 'contact' ? 'page' : undefined}
           >

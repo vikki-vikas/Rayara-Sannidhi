@@ -30,7 +30,7 @@ export function BankAccount({ dict }: { dict: Dictionary }) {
               }}
             >
               <Image
-                src={asset("/figma/qr-overlay.png")}
+                src={asset("/figma/qr-overlay.svg")}
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 344px, 56vw"

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { OrnamentDivider } from './OrnamentDivider';
 import { SectionHeading } from './SectionHeading';
+import { asset } from '@/lib/asset';
 
 const ROW_HEIGHT = 439;
 
@@ -39,7 +40,7 @@ function GalleryRow({ tiles }: { tiles: Tile[] }) {
           style={{ flex: `${tile.width} 1 0` }}
         >
           <Image
-            src={tile.src}
+            src={asset(tile.src)}
             alt={tile.alt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -51,6 +52,8 @@ function GalleryRow({ tiles }: { tiles: Tile[] }) {
     </div>
   );
 }
+
+
 
 export function Gallery({ dict }: { dict: Dictionary }) {
   return (
@@ -69,7 +72,7 @@ export function Gallery({ dict }: { dict: Dictionary }) {
             className="relative aspect-square overflow-hidden"
           >
             <Image
-              src={tile.src}
+              src={asset(tile.src)}
               alt={tile.alt}
               fill
               sizes="50vw"

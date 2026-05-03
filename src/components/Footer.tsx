@@ -66,19 +66,19 @@ export function Footer({
               style={{ fontFamily: sansFamily, fontVariationSettings: "'wdth' 100" }}
             >
               <a
-                href={`/${currentLocale}`}
+                href={asset(`/${currentLocale}/`)}
                 className="text-center hover:underline lg:w-[92px]"
               >
                 {dict.nav.home}
               </a>
               <a
-                href={`/${currentLocale}/about`}
+                href={asset(`/${currentLocale}/about/`)}
                 className="text-center hover:underline lg:w-[92px]"
               >
                 {dict.nav.about}
               </a>
               <a
-                href={`/${currentLocale}/contact`}
+                href={asset(`/${currentLocale}/contact/`)}
                 className="whitespace-nowrap text-center hover:underline"
               >
                 {dict.nav.contact}
