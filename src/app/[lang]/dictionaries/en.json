@@ -1,0 +1,102 @@
+{
+  "site": {
+    "name": "RAYARIDDARE",
+    "tagline": "Samskruthi Achara Vichara Adarita Samste"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "language": {
+    "label": "Language",
+    "english": "English",
+    "kannada": "ಕನ್ನಡ"
+  },
+  "hero": {
+    "kicker": "WELCOME",
+    "heading": "Sri Raghavendra Swamy Seva Samiti Trust",
+    "body": "Raghavendra Swamy Mutt, Adakamaranahalli was built for the convenience of Sri Guru Rayara devotees. In consonance with the famous saying from Mahabharata <strong>'Dharmo Rakshati Rakshitaha'</strong> the Mutt regularly conducts various religious activities including various Poojas, Homas, Annadana and welcomes devotees to perform functions such as Upanayana, Upakarma, Shraddha Tarpana amongst others. The Mutt is also making sure to do its part in helping students by providing scholarships and other just benefits."
+  },
+  "quote": {
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+    "attribution": "Shri Krishna (Bhavadgita 2-21)"
+  },
+  "services": {
+    "items": [
+      "Guru Rayarige\nNitya Pooja Seva",
+      "Prasada\nVitarane",
+      "Aradhane\nPooja & Seva",
+      "Vidyarthi Gaurava\nDhana Vitarane",
+      "Yearly Mudradharane\n& Upakarma",
+      "Habbada Dinadalli\nAnna Dana",
+      "Special Occassion\nPoojas"
+    ]
+  },
+  "gallery": {
+    "heading": "GALLERY"
+  },
+  "sevas": {
+    "sectionHeading": "SEVAS & DONATIONS",
+    "heading": "Seva Registration",
+    "hours": "Temple is open every day from <strong>6.00 A.M. to 12.00 P.M.</strong> & <strong>5.00 P.M. to 8.00 P.M</strong>",
+    "list": [
+      "Phala Panchmrutha",
+      "Hovina Alankara",
+      "Hastodaka",
+      "One Day Maha Pooje",
+      "All Homas",
+      "Grihpravesha - Gana Homa & Satyanarayana Pooje",
+      "All Poojas"
+    ],
+    "ctaPrompt": "For booking & enquiry for more details",
+    "ctaLabel": "Contact Us"
+  },
+  "bank": {
+    "heading": "BANK ACCOUNT",
+    "accountName": "Account Name:",
+    "accountNameValue": "Sri Raghavendra Swamy Seva Samiti Trust",
+    "accountNumber": "Account Number:",
+    "accountNumberValue": "1009845319087",
+    "ifsc": "IFSC CODE:",
+    "ifscValue": "SBIN00003689",
+    "exemption": "Donations tax exemption in India is primarily claimed under <strong>Section 80G</strong> of the Income Tax Act, 1961",
+    "exemptionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+  },
+  "initiatives": {
+    "heading": "UPCOMING INITIATIVES",
+    "items": [
+      "Gorakse",
+      "Vidyarthi Protsaha Dhana",
+      "Prathibha Puraskara"
+    ]
+  },
+  "about": {
+    "heading": "Sri Raghavendra Swamy Seva Samiti Trust",
+    "body": "Raghavendra Math was built for the convenience of Guru Raya's devotees and for the convenience of performing religious works such as distributing food, distributing prasad, performing Upanayanadi and performing Shraddha Tarpan for the relatives of ancestors, as per the saying <strong>\"Dharmo Rakshati Rakshataha\"</strong>.",
+    "trustMembersHeading": "Trust Members",
+    "chairman": {
+      "name": "Diggavi Raghavenda Achar",
+      "phone": "+91 9449266115"
+    },
+    "members": [
+      "D Padma",
+      "Swathi",
+      "Sirekolla Suresh",
+      "Chandrika D",
+      "Koushik Sirekolla",
+      "Rohita Priya Sirekolla"
+    ]
+  },
+  "contact": {
+    "mapAlt": "Map showing Sri Raghavendra Swamy Temple location",
+    "addressLabel": "ADDRESS",
+    "phoneLabel": "PHONE"
+  },
+  "footer": {
+    "address": "2nd main road, Gowdappa layout, Raghavendra Swamy Temple, Adakamaranahalli - 562123",
+    "phone": "+91 9449266115",
+    "legal": "Privacy Policy | Terms & Conditions",
+    "copyright": "©2026 Sri Raghavendra Swamy Seva Samiti Trust"
+  }
+}

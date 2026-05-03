@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "skills": {
+    "figma-implement-design": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "skillPath": "skills/figma-implement-design/SKILL.md",
+      "computedHash": "adad024a37deea876a5ef9572e16224dc85d88fe0d8451773c75d55e9ea0d854"
+    },
+    "next-best-practices": {
+      "source": "vercel-labs/next-skills",
+      "sourceType": "github",
+      "computedHash": "db85045827ebeb83ac8dbc992b69188755eeb74dcf01cbf5e694d58aa494a106"
+    },
+    "radix-ui-design-system": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "75a037be2bbfcc4c8a70748857e387b49238a4bdc91abd4b9db11f8062c8d30c"
+    },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "f54f39ce967af3a4bba1f662c3600f0253467508d5fbbc7c545c67e102da2253"
+    }
+  }
+}
