@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
 
 export function Hero({ dict }: { dict: Dictionary }) {
   const fontFamily =
@@ -10,7 +11,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
       <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center gap-8 px-5 py-10 sm:gap-10 sm:px-6 sm:py-14 lg:flex-row lg:items-center lg:justify-center lg:gap-10 lg:px-8 lg:py-20 xl:gap-[93px] xl:px-12 xl:py-24">
         <div className="relative aspect-square w-full max-w-[326px] shrink-0 overflow-hidden rounded-[12px] sm:max-w-[420px] sm:rounded-[16px] lg:w-[380px] lg:max-w-none lg:rounded-full xl:w-[526px]">
           <Image
-            src="/figma/hero-deity.png"
+            src={asset("/figma/hero-deity.png")}
             alt={dict.hero.heading}
             fill
             sizes="(min-width: 1280px) 526px, (min-width: 1024px) 380px, 90vw"

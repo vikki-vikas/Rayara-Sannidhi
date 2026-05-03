@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
 
 export function Header({ dict }: { dict: Dictionary }) {
   const displayFamily =
@@ -11,7 +12,7 @@ export function Header({ dict }: { dict: Dictionary }) {
     <header className="w-full rounded-bl-[18px] rounded-br-[18px] bg-[#793A4A] sm:rounded-bl-[24px] sm:rounded-br-[24px]">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-2 px-3 pt-[18px] pb-2 sm:gap-12 sm:px-10 sm:pt-[26px] sm:pb-3 lg:h-[92px] lg:items-center lg:px-[50px] lg:pt-[11px] lg:pb-[11px]">
         <Image
-          src="/header/Shanku Chakra 1.svg"
+          src={asset("/header/Shanku Chakra 1.svg")}
           alt=""
           width={56}
           height={70}
@@ -24,7 +25,7 @@ export function Header({ dict }: { dict: Dictionary }) {
         <div className="flex min-w-0 shrink items-center gap-[8px] sm:gap-[16px] lg:gap-[18px]">
           <div className="relative h-[40px] w-[40px] flex-shrink-0 overflow-hidden rounded-full ring-2 ring-[#FFA82B] ring-offset-[1px] ring-offset-[#793A4A] sm:h-14 sm:w-14 lg:h-16 lg:w-16">
             <Image
-              src="/header/rayaru.png"
+              src={asset("/header/rayaru.png")}
               alt={dict.site.name}
               width={66}
               height={99}
@@ -63,7 +64,7 @@ export function Header({ dict }: { dict: Dictionary }) {
         </div>
 
         <Image
-          src="/header/Shanku Chakra 2.svg"
+          src={asset("/header/Shanku Chakra 2.svg")}
           alt=""
           width={56}
           height={70}

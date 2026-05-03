@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
 
 export function BankAccount({ dict }: { dict: Dictionary }) {
   const fontFamily =
@@ -11,7 +12,7 @@ export function BankAccount({ dict }: { dict: Dictionary }) {
         <div className="flex w-full flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-[72px]">
           <div className="relative size-[220px] shrink-0 sm:size-[300px] lg:size-[380px]">
             <Image
-              src="/figma/qr-code.png"
+              src={asset("/figma/qr-code.png")}
               alt="QR code for donation"
               fill
               sizes="(min-width: 1024px) 380px, 60vw"
@@ -29,7 +30,7 @@ export function BankAccount({ dict }: { dict: Dictionary }) {
               }}
             >
               <Image
-                src="/figma/qr-overlay.png"
+                src={asset("/figma/qr-overlay.png")}
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 344px, 56vw"

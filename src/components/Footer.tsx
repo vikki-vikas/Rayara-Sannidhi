@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { OrnamentDivider } from './OrnamentDivider';
+import { asset } from '@/lib/asset';
 
 const iconClass = 'h-[22px] w-[22px] sm:h-[26px] sm:w-[26px] lg:h-[29.714px] lg:w-[29.714px]';
 
@@ -90,7 +91,7 @@ export function Footer({
           {/* Brand row: chakra | center | chakra */}
           <div className="flex w-full items-center justify-between gap-2 sm:gap-6 sm:justify-center lg:items-start lg:gap-[210px]">
             <Image
-              src="/header/Shanku Chakra 1.svg"
+              src={asset("/header/Shanku Chakra 1.svg")}
               alt=""
               width={128}
               height={160}
@@ -103,7 +104,7 @@ export function Footer({
               <div className="flex min-w-0 items-center gap-2 sm:gap-[14px] lg:gap-[18px]">
                 <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-[#793A4A] ring-2 ring-[#FFA82B] ring-offset-[1px] ring-offset-[#93495C] sm:h-14 sm:w-14 lg:h-16 lg:w-16">
                   <Image
-                    src="/header/rayaru.png"
+                    src={asset("/header/rayaru.png")}
                     alt={dict.site.name}
                     width={66}
                     height={99}
@@ -145,7 +146,7 @@ export function Footer({
             </div>
 
             <Image
-              src="/header/Shanku Chakra 2.svg"
+              src={asset("/header/Shanku Chakra 2.svg")}
               alt=""
               width={128}
               height={160}

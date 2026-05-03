@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import { asset } from '@/lib/asset';
 
 export function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-[8px] sm:gap-[12px] lg:gap-[15px]">
       <Image
-        src="/section-flower.svg"
+        src={asset("/section-flower.svg")}
         alt=""
         width={45}
         height={42}
@@ -19,7 +20,7 @@ export function SectionHeading({ children }: { children: React.ReactNode }) {
         {children}
       </h2>
       <Image
-        src="/section-flower.svg"
+        src={asset("/section-flower.svg")}
         alt=""
         width={45}
         height={42}

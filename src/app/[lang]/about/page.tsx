@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale } from '../dictionaries';
+import { asset } from '@/lib/asset';
 
 export default async function AboutPage({
   params,
@@ -26,7 +27,7 @@ export default async function AboutPage({
           }}
         >
           <Image
-            src="/figma/about-deity.jpg"
+            src={asset("/figma/about-deity.jpg")}
             alt={dict.about.heading}
             fill
             sizes="(min-width: 1280px) 526px, (min-width: 1024px) 400px, 80vw"
@@ -55,7 +56,7 @@ export default async function AboutPage({
       <section className="flex w-full max-w-[1037px] flex-col items-center gap-10 sm:gap-12 lg:gap-[64px]">
         <div className="flex items-end justify-center gap-3 sm:gap-[15px]">
           <Image
-            src="/figma/trust-ornament.svg"
+            src={asset("/figma/trust-ornament.svg")}
             alt=""
             width={33}
             height={30}
@@ -70,7 +71,7 @@ export default async function AboutPage({
             {dict.about.trustMembersHeading}
           </h2>
           <Image
-            src="/figma/trust-ornament.svg"
+            src={asset("/figma/trust-ornament.svg")}
             alt=""
             width={33}
             height={30}

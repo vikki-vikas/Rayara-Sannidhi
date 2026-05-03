@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { SectionHeading } from './SectionHeading';
+import { asset } from '@/lib/asset';
 
 export function Sevas({ dict }: { dict: Dictionary }) {
   const fontFamily =
@@ -20,7 +21,7 @@ export function Sevas({ dict }: { dict: Dictionary }) {
             }}
           >
             <Image
-              src="/figma/sevas-image.png"
+              src={asset("/figma/sevas-image.png")}
               alt={dict.sevas.heading}
               fill
               sizes="(min-width: 1280px) 595px, (min-width: 1024px) 400px, 80vw"

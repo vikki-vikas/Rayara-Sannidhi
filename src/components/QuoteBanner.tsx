@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
 
 export function QuoteBanner({ dict }: { dict: Dictionary }) {
   const fontFamily =
@@ -8,7 +9,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
   return (
     <section className="relative flex w-full flex-col items-start gap-[10px] overflow-hidden px-5 py-10 sm:px-6 sm:py-16 lg:min-h-[347.597px] lg:px-[60px] lg:py-[101px]">
       <Image
-        src="/quote-flower.svg"
+        src={asset("/quote-flower.svg")}
         alt=""
         width={363}
         height={348}
@@ -17,7 +18,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
         className="pointer-events-none absolute left-[-109px] top-1/2 hidden h-[347.591px] w-[363.036px] -translate-y-1/2 opacity-30 lg:block"
       />
       <Image
-        src="/quote-flower.svg"
+        src={asset("/quote-flower.svg")}
         alt=""
         width={363}
         height={348}
@@ -41,7 +42,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
         <div className="flex items-center gap-[9px]">
           <span className="inline-flex h-5 w-7 sm:h-6 sm:w-9">
             <Image
-              src="/lotus.svg"
+              src={asset("/lotus.svg")}
               alt=""
               width={36}
               height={24}
@@ -62,7 +63,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
           </p>
           <span className="inline-flex h-5 w-7 sm:h-6 sm:w-9">
             <Image
-              src="/lotus.svg"
+              src={asset("/lotus.svg")}
               alt=""
               width={36}
               height={24}

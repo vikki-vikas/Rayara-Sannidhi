@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale } from '../dictionaries';
+import { asset } from '@/lib/asset';
 
 export default async function ContactPage({
   params,
@@ -22,7 +23,7 @@ export default async function ContactPage({
         style={{ aspectRatio: '2188 / 1700' }}
       >
         <Image
-          src="/figma/contact-map.png"
+          src={asset("/figma/contact-map.png")}
           alt={dict.contact.mapAlt}
           fill
           sizes="(min-width: 1024px) 898px, 100vw"
