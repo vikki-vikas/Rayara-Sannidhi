@@ -1,3 +1,5 @@
+import { asset } from '@/lib/asset';
+
 export function OrnamentDivider({ className = '' }: { className?: string }) {
   return (
     <div
@@ -6,7 +8,7 @@ export function OrnamentDivider({ className = '' }: { className?: string }) {
       className={`pointer-events-none w-full ${className}`}
       style={{
         height: '14.518px',
-        backgroundImage: 'url(/header/ornament-divider.svg)',
+        backgroundImage: `url(${asset('/header/ornament-divider.svg')})`,
         backgroundRepeat: 'repeat-x',
         backgroundSize: '40.014px 14.518px',
         backgroundPosition: 'left center',

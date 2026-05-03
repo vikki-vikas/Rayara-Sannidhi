@@ -17,6 +17,7 @@ import { Header } from '@/components/Header';
 import { TopNav } from '@/components/TopNav';
 import { OrnamentDivider } from '@/components/OrnamentDivider';
 import { Footer } from '@/components/Footer';
+import { asset } from '@/lib/asset';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -92,7 +93,7 @@ export default async function RootLayout({
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 z-0 opacity-30"
               style={{
-                backgroundImage: 'url(/background.svg)',
+                backgroundImage: `url(${asset('/background.svg')})`,
                 backgroundRepeat: 'repeat',
                 backgroundSize: '257px 514px',
                 backgroundPosition: 'top left',
