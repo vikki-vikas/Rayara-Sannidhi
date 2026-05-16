@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { asset } from '@/lib/asset';
+import { BrandLockup } from './BrandLockup';
 
 export function Header({ dict }: { dict: Dictionary }) {
   const displayFamily =
@@ -19,6 +20,9 @@ export function Header({ dict }: { dict: Dictionary }) {
           priority
           unoptimized
           className="h-[34px] w-[27px] flex-shrink-0 sm:h-[56px] sm:w-[45px] lg:h-[70px] lg:w-[56px]"
+          // Matches the drop shadow baked into "Shanku Chakra 2.svg"
+          // (feOffset dy=4, feGaussianBlur stdDeviation=2, black @ 0.25).
+          style={{ filter: 'drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25))' }}
           aria-hidden="true"
         />
 
@@ -34,33 +38,12 @@ export function Header({ dict }: { dict: Dictionary }) {
             />
           </div>
 
-          <div className="inline-flex min-w-0 flex-col items-stretch leading-normal">
-            <p
-              className="w-full whitespace-nowrap font-extrabold uppercase leading-normal text-[#FF780B] sm:text-[24px] lg:text-[30px]"
-              style={{
-                fontFamily: displayFamily,
-                fontSize: 'clamp(14px, 4.6vw, 18px)',
-                WebkitTextStrokeWidth: '1px',
-                WebkitTextStrokeColor: '#FFFFFF',
-                paintOrder: 'stroke fill',
-              }}
-            >
-              {dict.site.name}
-            </p>
-            <p
-              className="w-full whitespace-nowrap text-white"
-              style={{
-                fontFamily: sansFamily,
-                fontSize: 'clamp(5.6px, 1.8vw, 11.378px)',
-                fontStyle: 'normal',
-                fontWeight: 400,
-                lineHeight: 'normal',
-                fontVariationSettings: "'wdth' 100",
-              }}
-            >
-              {dict.site.tagline}
-            </p>
-          </div>
+          <BrandLockup
+            name={dict.site.name}
+            tagline={dict.site.tagline}
+            displayFamily={displayFamily}
+            sansFamily={sansFamily}
+          />
         </div>
 
         <Image

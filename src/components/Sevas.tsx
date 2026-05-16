@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import type { Dictionary } from '@/app/[lang]/dictionaries';
+import type { Dictionary, Locale } from '@/app/[lang]/dictionaries';
 import { SectionHeading } from './SectionHeading';
 import { asset } from '@/lib/asset';
 
-export function Sevas({ dict }: { dict: Dictionary }) {
+export function Sevas({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const fontFamily =
     "var(--font-open-sans), var(--font-noto-kannada), Arial, sans-serif";
 
@@ -88,7 +88,7 @@ export function Sevas({ dict }: { dict: Dictionary }) {
                 {dict.sevas.ctaPrompt}
               </p>
               <a
-                href="#contact"
+                href={asset(`/${lang}/contact/`)}
                 className="inline-flex h-[36px] w-[130px] items-center justify-center bg-[#793A4A] text-[14px] font-bold text-white transition-colors hover:bg-[#5d2b39] sm:h-[40px] sm:w-[150px] sm:text-[16px] lg:text-[18px]"
                 style={{
                   fontFamily,

@@ -13,10 +13,10 @@ const row1 = [
 ];
 
 const row2 = [
-  { src: '/figma/gallery-3.png', width: 949, alt: 'Gallery image 4' },
-  { src: '/figma/gallery-4.png', width: 327, alt: 'Gallery image 5' },
-  { src: '/figma/gallery-5.png', width: 516, alt: 'Gallery image 6' },
-  { src: '/figma/gallery-2.png', width: 292, alt: 'Gallery image 7' },
+  { src: '/figma/gallery-4.png', width: 327, alt: 'Gallery image 4' },
+  { src: '/figma/gallery-5.png', width: 516, alt: 'Gallery image 5' },
+  { src: '/figma/gallery-6.png', width: 309, alt: 'Gallery image 6' },
+  { src: '/figma/gallery-7.png', width: 298, alt: 'Gallery image 7' },
 ];
 
 type Tile = (typeof row1)[number];
@@ -27,7 +27,8 @@ const allTiles: Tile[] = [
   { src: '/figma/gallery-3.png', width: 1, alt: 'Gallery image 3' },
   { src: '/figma/gallery-4.png', width: 1, alt: 'Gallery image 4' },
   { src: '/figma/gallery-5.png', width: 1, alt: 'Gallery image 5' },
-  { src: '/figma/gallery-2.png', width: 1, alt: 'Gallery image 6' },
+  { src: '/figma/gallery-6.png', width: 1, alt: 'Gallery image 6' },
+  { src: '/figma/gallery-7.png', width: 1, alt: 'Gallery image 7' },
 ];
 
 function GalleryRow({ tiles }: { tiles: Tile[] }) {

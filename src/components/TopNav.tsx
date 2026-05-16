@@ -30,6 +30,14 @@ export function TopNav({
   const linkBase =
     "font-['Open_Sans','Noto_Sans_Kannada',sans-serif] text-[11px] sm:text-[14px] lg:text-[16px] transition-colors";
 
+  const langFont =
+    "var(--font-open-sans), var(--font-noto-kannada), Arial, sans-serif";
+
+  const languages = [
+    { code: 'en' as const, label: dict.language.english },
+    { code: 'kn' as const, label: dict.language.kannada },
+  ];
+
   const segments = pathname.split('/').filter(Boolean);
   const currentRoute = segments[1] ?? '';
 
@@ -66,45 +74,42 @@ export function TopNav({
           </a>
         </div>
 
-        <div className="flex flex-col items-start gap-px leading-[normal] lg:w-[117px]">
-          <p
-            className="whitespace-nowrap text-[10px] text-white sm:text-[13px] lg:text-[16px]"
-            style={{
-              fontFamily:
-                "var(--font-open-sans), var(--font-noto-kannada), Arial, sans-serif",
-            }}
-          >
-            <button
-              type="button"
-              onClick={() => switchTo('en')}
-              className={
-                currentLocale === 'en'
-                  ? 'font-semibold text-white'
-                  : 'font-normal text-white/80 hover:text-white'
-              }
-              aria-pressed={currentLocale === 'en'}
-            >
-              {dict.language.english}
-            </button>
-            <span className="mx-1 font-normal">/</span>
-            <button
-              type="button"
-              onClick={() => switchTo('kn')}
-              className={
-                currentLocale === 'kn'
-                  ? 'font-semibold text-white'
-                  : 'font-normal text-white/80 hover:text-white'
-              }
-              aria-pressed={currentLocale === 'kn'}
-            >
-              {dict.language.kannada}
-            </button>
-          </p>
-          <span
-            aria-hidden="true"
-            className={`block h-px w-[36px] bg-white transition-opacity sm:w-[50px] lg:w-[61px] ${currentLocale === 'en' ? 'opacity-100' : 'opacity-0'
-              }`}
-          />
+        <div
+          className="flex items-start gap-1 whitespace-nowrap leading-[normal] sm:gap-2"
+          style={{ fontFamily: langFont }}
+        >
+          {languages.map((lng, i) => {
+            const isActive = currentLocale === lng.code;
+            return (
+              <div key={lng.code} className="flex items-start gap-1 sm:gap-2">
+                {i > 0 && (
+                  <span className="text-[10px] font-normal text-white/80 sm:text-[13px] lg:text-[16px]">
+                    /
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={() => switchTo(lng.code)}
+                  aria-pressed={isActive}
+                  className="flex flex-col items-center"
+                >
+                  <span
+                    className={`text-[10px] sm:text-[13px] lg:text-[16px] ${isActive
+                      ? 'font-semibold text-white'
+                      : 'font-normal text-white/80 hover:text-white'
+                      }`}
+                  >
+                    {lng.label}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={`mt-[2px] block h-px w-full bg-white transition-opacity ${isActive ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  />
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </nav>

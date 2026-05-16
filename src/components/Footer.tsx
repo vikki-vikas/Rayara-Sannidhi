@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { OrnamentDivider } from './OrnamentDivider';
+import { BrandLockup } from './BrandLockup';
 import { asset } from '@/lib/asset';
 
 const iconClass = 'h-[22px] w-[22px] sm:h-[26px] sm:w-[26px] lg:h-[29.714px] lg:w-[29.714px]';
@@ -96,7 +97,10 @@ export function Footer({
               width={128}
               height={160}
               unoptimized
-              className="h-[44px] w-[35px] shrink-0 sm:h-[100px] sm:w-[80px] lg:h-[160px] lg:w-[128px]"
+              // Matches the shadow baked into "Shanku Chakra 2.svg" (the right
+              // chakra). That shadow lives in the SVG so it scales with the
+              // icon — mirror it per breakpoint so both sides stay equal.
+              className="h-[44px] w-[35px] shrink-0 [filter:drop-shadow(0_2px_1px_rgba(0,0,0,0.25))] sm:h-[100px] sm:w-[80px] sm:[filter:drop-shadow(0_5px_3px_rgba(0,0,0,0.25))] lg:h-[160px] lg:w-[128px] lg:[filter:drop-shadow(0_8px_4px_rgba(0,0,0,0.25))]"
               aria-hidden="true"
             />
 
@@ -111,30 +115,12 @@ export function Footer({
                     className="absolute left-1/2 top-[-22px] h-[62px] w-[42px] max-w-none -translate-x-1/2 sm:top-[-30px] sm:h-[86px] sm:w-[58px] lg:left-[-1px] lg:top-[-34px] lg:h-[99px] lg:w-[66px] lg:translate-x-0"
                   />
                 </div>
-                <div className="inline-flex min-w-0 flex-col items-stretch leading-normal">
-                  <p
-                    className="w-full overflow-hidden whitespace-nowrap font-extrabold uppercase leading-normal text-[#FF780B] sm:text-[24px] lg:text-[30px]"
-                    style={{
-                      fontFamily: displayFamily,
-                      fontSize: 'clamp(13px, 4.4vw, 20px)',
-                      WebkitTextStrokeWidth: '1px',
-                      WebkitTextStrokeColor: '#FFFFFF',
-                      paintOrder: 'stroke fill',
-                    }}
-                  >
-                    {dict.site.name}
-                  </p>
-                  <p
-                    className="w-full overflow-hidden whitespace-nowrap font-normal text-white"
-                    style={{
-                      fontFamily: sansFamily,
-                      fontSize: 'clamp(5.4px, 1.7vw, 11.378px)',
-                      fontVariationSettings: "'wdth' 100",
-                    }}
-                  >
-                    {dict.site.tagline}
-                  </p>
-                </div>
+                <BrandLockup
+                  name={dict.site.name}
+                  tagline={dict.site.tagline}
+                  displayFamily={displayFamily}
+                  sansFamily={sansFamily}
+                />
               </div>
               <div
                 className="flex w-full flex-col items-center gap-[6px] text-center text-[12px] leading-[1.5] text-white sm:text-[15px] lg:gap-[9px] lg:text-[18px] lg:leading-[28px]"
@@ -175,11 +161,8 @@ export function Footer({
                 <GlobeIcon />
               </a>
             </div>
-            <div className="flex w-full flex-col items-center gap-1 text-center sm:flex-row sm:justify-between sm:gap-3 sm:text-left">
-              <p className="text-[10px] font-semibold leading-[1.5] sm:text-[12px]">
-                {dict.footer.legal}
-              </p>
-              <p className="text-[10px] leading-[1.5] sm:text-right sm:text-[12px]">
+            <div className="flex w-full flex-col items-center text-center">
+              <p className="text-[10px] leading-[1.5] sm:text-[12px]">
                 {dict.footer.copyright}
               </p>
             </div>
@@ -190,10 +173,7 @@ export function Footer({
             className="hidden w-full flex-row items-center justify-between gap-0 px-[100px] text-white lg:flex"
             style={{ fontFamily: sansFamily, fontVariationSettings: "'wdth' 100" }}
           >
-            <p className="whitespace-nowrap text-[16px] font-semibold leading-[1.7]">
-              {dict.footer.legal}
-            </p>
-            <p className="whitespace-nowrap text-center text-[14px] leading-[28px]">
+            <p className="whitespace-nowrap text-[14px] leading-[28px]">
               {dict.footer.copyright}
             </p>
             <div className="flex items-center gap-[38px]">

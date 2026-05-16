@@ -1,4 +1,17 @@
+import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
+import { asset } from '@/lib/asset';
+
+// Badge icons exported from Figma — index-aligned with dict.services.items.
+const SERVICE_ICONS = [
+  '/figma/services/guru-rayarige-nitya-pooja-seva.png',
+  '/figma/services/prasada-vitarane.png',
+  '/figma/services/aradhane-pooja-seva.png',
+  '/figma/services/vidyarthi-gaurava-dhana-vitarane.png',
+  '/figma/services/yearly-mudradharane-upakarma.png',
+  '/figma/services/habbada-dinadalli-anna-dana.png',
+  '/figma/services/special-occassion-poojas.png',
+];
 
 export function ServiceGrid({ dict }: { dict: Dictionary }) {
   return (
@@ -17,7 +30,10 @@ export function ServiceGrid({ dict }: { dict: Dictionary }) {
                   : ''
               }
             >
-              <ServiceCircle label={label} />
+              <ServiceCircle
+                label={label}
+                icon={SERVICE_ICONS[idx]}
+              />
             </div>
           );
         })}
@@ -26,20 +42,34 @@ export function ServiceGrid({ dict }: { dict: Dictionary }) {
   );
 }
 
-function ServiceCircle({ label }: { label: string }) {
+function ServiceCircle({ label, icon }: { label: string; icon?: string }) {
   const lines = label.split('\n');
   return (
     <div className="flex w-[150px] flex-col items-center gap-2 sm:w-[200px] sm:gap-3 lg:w-[250px]">
-      <div className="relative size-[110px] shrink-0 sm:size-[150px] lg:size-[184px]">
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            background:
-              'radial-gradient(circle at center, #FFE0BD 0%, #F19B5A 70%, #C56B25 100%)',
-            boxShadow: 'inset 0 0 0 4px #93495C',
-          }}
-        />
-        <div className="absolute inset-2 rounded-full border-[3px] border-[#FFA82B] mix-blend-overlay" />
+      <div className="relative size-[110px] shrink-0 overflow-hidden rounded-full sm:size-[150px] lg:size-[184px]">
+        {icon ? (
+          <Image
+            src={asset(icon)}
+            alt=""
+            width={184}
+            height={184}
+            unoptimized
+            aria-hidden="true"
+            className="size-full rounded-full object-contain"
+          />
+        ) : (
+          <>
+            <div
+              className="absolute inset-0 rounded-full"
+              style={{
+                background:
+                  'radial-gradient(circle at center, #FFE0BD 0%, #F19B5A 70%, #C56B25 100%)',
+                boxShadow: 'inset 0 0 0 4px #93495C',
+              }}
+            />
+            <div className="absolute inset-2 rounded-full border-[3px] border-[#FFA82B] mix-blend-overlay" />
+          </>
+        )}
       </div>
       <div
         className="text-center text-[13px] font-bold leading-[1.3] text-[#93495C] sm:text-[18px] lg:text-[24px]"

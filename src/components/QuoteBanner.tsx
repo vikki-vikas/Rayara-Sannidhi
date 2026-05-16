@@ -8,24 +8,29 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
 
   return (
     <section className="relative flex w-full flex-col items-start gap-[10px] overflow-hidden px-5 py-10 sm:px-6 sm:py-16 lg:min-h-[347.597px] lg:px-[60px] lg:py-[101px]">
-      <Image
-        src={asset("/quote-flower.svg")}
-        alt=""
-        width={363}
-        height={348}
-        unoptimized
+      {/* Figma node 237:21 — flex items-center justify-between, two 363x347.597
+          flower boxes flush to each edge, right one mirrored, at 15% opacity */}
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-109px] top-1/2 hidden h-[347.591px] w-[363.036px] -translate-y-1/2 opacity-30 lg:block"
-      />
-      <Image
-        src={asset("/quote-flower.svg")}
-        alt=""
-        width={363}
-        height={348}
-        unoptimized
-        aria-hidden="true"
-        className="pointer-events-none absolute right-[-109px] top-1/2 hidden h-[347.591px] w-[363.036px] -translate-y-1/2 -scale-x-100 opacity-30 lg:block"
-      />
+        className="pointer-events-none absolute inset-0 hidden items-center justify-between lg:flex"
+      >
+        <Image
+          src={asset("/quote-flower.svg")}
+          alt=""
+          width={363}
+          height={348}
+          unoptimized
+          className="h-[347.597px] w-[363.036px] shrink-0 opacity-[0.15]"
+        />
+        <Image
+          src={asset("/quote-flower.svg")}
+          alt=""
+          width={363}
+          height={348}
+          unoptimized
+          className="h-[347.597px] w-[363.036px] shrink-0 -scale-x-100 opacity-[0.15]"
+        />
+      </div>
 
       <div className="relative mx-auto flex w-full max-w-[639px] flex-col items-center gap-4 text-center lg:gap-[20px]">
         <p

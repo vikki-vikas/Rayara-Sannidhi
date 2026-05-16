@@ -24,7 +24,7 @@ export default async function Home({
       <QuoteBanner dict={dict} />
       <ServiceGrid dict={dict} />
       <Gallery dict={dict} />
-      <Sevas dict={dict} />
+      <Sevas dict={dict} lang={lang} />
       <BankAccount dict={dict} />
       <UpcomingInitiatives dict={dict} />
     </>

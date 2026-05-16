@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getDictionary, hasLocale } from '../dictionaries';
-import { asset } from '@/lib/asset';
 
 export default async function ContactPage({
   params,
@@ -22,14 +20,13 @@ export default async function ContactPage({
         className="relative w-full overflow-hidden"
         style={{ aspectRatio: '2188 / 1700' }}
       >
-        <Image
-          src={asset("/figma/contact-map.png")}
-          alt={dict.contact.mapAlt}
-          fill
-          sizes="(min-width: 1024px) 898px, 100vw"
-          priority
-          unoptimized
-          className="object-cover"
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3886.6024936383096!2d77.4414345!3d13.0609555!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae25c29ddbfa19%3A0x80a7f95e303d061f!2sShri%20Raghavendra%20Swami%20Temple!5e0!3m2!1sen!2sin!4v1778943709476!5m2!1sen!2sin"
+          title={dict.contact.mapAlt}
+          className="absolute inset-0 h-full w-full border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
 
