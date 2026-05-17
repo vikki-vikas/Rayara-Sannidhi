@@ -13,16 +13,13 @@ export function Header({ dict }: { dict: Dictionary }) {
     <header className="w-full rounded-bl-[18px] rounded-br-[18px] bg-[#793A4A] sm:rounded-bl-[24px] sm:rounded-br-[24px]">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-2 px-3 pt-[18px] pb-2 sm:gap-12 sm:px-10 sm:pt-[26px] sm:pb-3 lg:h-[92px] lg:items-center lg:px-[50px] lg:pt-[11px] lg:pb-[11px]">
         <Image
-          src={asset("/header/Shanku Chakra 1.svg")}
+          src={asset("/header/Shanku Chakra 2.svg")}
           alt=""
           width={56}
           height={70}
           priority
           unoptimized
           className="h-[34px] w-[27px] flex-shrink-0 sm:h-[56px] sm:w-[45px] lg:h-[70px] lg:w-[56px]"
-          // Matches the drop shadow baked into "Shanku Chakra 2.svg"
-          // (feOffset dy=4, feGaussianBlur stdDeviation=2, black @ 0.25).
-          style={{ filter: 'drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25))' }}
           aria-hidden="true"
         />
 
@@ -47,13 +44,16 @@ export function Header({ dict }: { dict: Dictionary }) {
         </div>
 
         <Image
-          src={asset("/header/Shanku Chakra 2.svg")}
+          src={asset("/header/Shanku Chakra 1.svg")}
           alt=""
           width={56}
           height={70}
           priority
           unoptimized
           className="h-[34px] w-[27px] flex-shrink-0 sm:h-[56px] sm:w-[45px] lg:h-[70px] lg:w-[56px]"
+          // Matches the drop shadow baked into "Shanku Chakra 2.svg"
+          // (feOffset dy=4, feGaussianBlur stdDeviation=2, black @ 0.25).
+          style={{ filter: 'drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25))' }}
           aria-hidden="true"
         />
       </div>

@@ -92,15 +92,12 @@ export function Footer({
           {/* Brand row: chakra | center | chakra */}
           <div className="flex w-full items-center justify-between gap-2 sm:gap-6 sm:justify-center lg:items-start lg:gap-[210px]">
             <Image
-              src={asset("/header/Shanku Chakra 1.svg")}
+              src={asset("/header/Shanku Chakra 2.svg")}
               alt=""
               width={128}
               height={160}
               unoptimized
-              // Matches the shadow baked into "Shanku Chakra 2.svg" (the right
-              // chakra). That shadow lives in the SVG so it scales with the
-              // icon — mirror it per breakpoint so both sides stay equal.
-              className="h-[44px] w-[35px] shrink-0 [filter:drop-shadow(0_2px_1px_rgba(0,0,0,0.25))] sm:h-[100px] sm:w-[80px] sm:[filter:drop-shadow(0_5px_3px_rgba(0,0,0,0.25))] lg:h-[160px] lg:w-[128px] lg:[filter:drop-shadow(0_8px_4px_rgba(0,0,0,0.25))]"
+              className="h-[44px] w-[35px] shrink-0 sm:h-[100px] sm:w-[80px] lg:h-[160px] lg:w-[128px]"
               aria-hidden="true"
             />
 
@@ -132,12 +129,15 @@ export function Footer({
             </div>
 
             <Image
-              src={asset("/header/Shanku Chakra 2.svg")}
+              src={asset("/header/Shanku Chakra 1.svg")}
               alt=""
               width={128}
               height={160}
               unoptimized
-              className="h-[44px] w-[35px] shrink-0 sm:h-[100px] sm:w-[80px] lg:h-[160px] lg:w-[128px]"
+              // Matches the shadow baked into "Shanku Chakra 2.svg" (the left
+              // chakra). That shadow lives in the SVG so it scales with the
+              // icon — mirror it per breakpoint so both sides stay equal.
+              className="h-[44px] w-[35px] shrink-0 [filter:drop-shadow(0_2px_1px_rgba(0,0,0,0.25))] sm:h-[100px] sm:w-[80px] sm:[filter:drop-shadow(0_5px_3px_rgba(0,0,0,0.25))] lg:h-[160px] lg:w-[128px] lg:[filter:drop-shadow(0_8px_4px_rgba(0,0,0,0.25))]"
               aria-hidden="true"
             />
           </div>
