@@ -19,6 +19,13 @@ const row2 = [
   { src: '/figma/gallery-7.png', width: 298, alt: 'Gallery image 7' },
 ];
 
+// Third desktop row — widths sized to each image's natural aspect ratio at
+// ROW_HEIGHT (780 ≈ 439 × 16/9 landscape, 247 ≈ 439 × 9/16 portrait).
+const row3 = [
+  { src: '/figma/gallery10.jpeg', width: 780, alt: 'Gallery image 8' },
+  { src: '/figma/gallery11.jpeg', width: 247, alt: 'Gallery image 9' },
+];
+
 type Tile = (typeof row1)[number];
 
 const allTiles: Tile[] = [
@@ -29,6 +36,8 @@ const allTiles: Tile[] = [
   { src: '/figma/gallery-5.png', width: 1, alt: 'Gallery image 5' },
   { src: '/figma/gallery-6.png', width: 1, alt: 'Gallery image 6' },
   { src: '/figma/gallery-7.png', width: 1, alt: 'Gallery image 7' },
+  { src: '/figma/gallery10.jpeg', width: 1, alt: 'Gallery image 8' },
+  { src: '/figma/gallery11.jpeg', width: 1, alt: 'Gallery image 9' },
 ];
 
 function GalleryRow({ tiles }: { tiles: Tile[] }) {
@@ -88,6 +97,7 @@ export function Gallery({ dict }: { dict: Dictionary }) {
       <div className="hidden w-full flex-col gap-[10px] lg:flex">
         <GalleryRow tiles={row1} />
         <GalleryRow tiles={row2} />
+        <GalleryRow tiles={row3} />
       </div>
 
       <OrnamentDivider />
