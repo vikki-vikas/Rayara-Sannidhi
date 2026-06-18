@@ -8,7 +8,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
     "var(--font-open-sans), var(--font-noto-kannada), Arial, sans-serif";
 
   return (
-    <section className="relative flex w-full flex-col items-start gap-[10px] overflow-hidden px-5 py-10 sm:px-6 sm:py-16 lg:min-h-[347.597px] lg:px-[60px] lg:py-[101px]">
+    <section className="relative flex w-full flex-col items-start gap-[10px] overflow-hidden px-5 py-10 sm:px-6 sm:py-16 lg:min-h-[510px] lg:justify-center lg:px-[60px] lg:py-[101px]">
       {/* Figma node 237:21 — flex items-center justify-between, two 363x347.597
           flower boxes flush to each edge, right one mirrored, at 15% opacity */}
       <div
