@@ -17,6 +17,7 @@ import { Header } from '@/components/Header';
 import { TopNav } from '@/components/TopNav';
 import { OrnamentDivider } from '@/components/OrnamentDivider';
 import { Footer } from '@/components/Footer';
+import { SocialFloat } from '@/components/SocialFloat';
 import { asset } from '@/lib/asset';
 
 const geistSans = Geist({
@@ -111,6 +112,7 @@ export default async function RootLayout({
 
             <Footer dict={dict} currentLocale={lang} />
           </main>
+          <SocialFloat />
         </Theme>
       </body>
     </html>

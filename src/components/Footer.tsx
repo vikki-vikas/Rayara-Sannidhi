@@ -147,11 +147,11 @@ export function Footer({
             className="flex w-full flex-col items-center gap-3 text-white sm:gap-4 lg:hidden"
             style={{ fontFamily: sansFamily, fontVariationSettings: "'wdth' 100" }}
           >
-            <div className="flex items-center gap-6 sm:gap-8">
-              <a href="#" aria-label="Facebook" className="text-white transition-colors hover:text-[#FFA82B]">
+            {/* <div className="flex items-center gap-6 sm:gap-8">
+              <a href="https://www.facebook.com/share/1NkrpyiJaz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white transition-colors hover:text-[#FFA82B]">
                 <FacebookIcon />
               </a>
-              <a href="#" aria-label="Instagram" className="text-white transition-colors hover:text-[#FFA82B]">
+              <a href="https://www.instagram.com/shriraghavendraswamymatha2013?igsh=bWVyaXo2aGNhZ2lp" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white transition-colors hover:text-[#FFA82B]">
                 <InstagramIcon />
               </a>
               <a href="#" aria-label="Email" className="text-white transition-colors hover:text-[#FFA82B]">
@@ -160,7 +160,7 @@ export function Footer({
               <a href="#" aria-label="Website" className="text-white transition-colors hover:text-[#FFA82B]">
                 <GlobeIcon />
               </a>
-            </div>
+            </div> */}
             <div className="flex w-full flex-col items-center text-center">
               <p className="text-[10px] leading-[1.5] sm:text-[12px]">
                 {dict.footer.copyright}
@@ -170,17 +170,17 @@ export function Footer({
 
           {/* Desktop: legal | copyright | social */}
           <div
-            className="hidden w-full flex-row items-center justify-between gap-0 px-[100px] text-white lg:flex"
+            className="hidden w-full flex-row items-center justify-center gap-0 px-[100px] text-white lg:flex"
             style={{ fontFamily: sansFamily, fontVariationSettings: "'wdth' 100" }}
           >
             <p className="whitespace-nowrap text-[14px] leading-[28px]">
               {dict.footer.copyright}
             </p>
-            <div className="flex items-center gap-[38px]">
-              <a href="#" aria-label="Facebook" className="text-white transition-colors hover:text-[#FFA82B]">
+            {/* <div className="flex items-center gap-[38px]">
+              <a href="https://www.facebook.com/share/1NkrpyiJaz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white transition-colors hover:text-[#FFA82B]">
                 <FacebookIcon />
               </a>
-              <a href="#" aria-label="Instagram" className="text-white transition-colors hover:text-[#FFA82B]">
+              <a href="https://www.instagram.com/shriraghavendraswamymatha2013?igsh=bWVyaXo2aGNhZ2lp" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white transition-colors hover:text-[#FFA82B]">
                 <InstagramIcon />
               </a>
               <a href="#" aria-label="Email" className="text-white transition-colors hover:text-[#FFA82B]">
@@ -189,7 +189,7 @@ export function Footer({
               <a href="#" aria-label="Website" className="text-white transition-colors hover:text-[#FFA82B]">
                 <GlobeIcon />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

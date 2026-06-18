@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { Dictionary } from '@/app/[lang]/dictionaries';
 import { asset } from '@/lib/asset';
+import { ScrollRotate } from './ScrollRotate';
 
 export function QuoteBanner({ dict }: { dict: Dictionary }) {
   const fontFamily =
@@ -14,22 +15,26 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 hidden items-center justify-between lg:flex"
       >
-        <Image
-          src={asset("/quote-flower.svg")}
-          alt=""
-          width={363}
-          height={348}
-          unoptimized
-          className="h-[347.597px] w-[363.036px] shrink-0 opacity-[0.15]"
-        />
-        <Image
-          src={asset("/quote-flower.svg")}
-          alt=""
-          width={363}
-          height={348}
-          unoptimized
-          className="h-[347.597px] w-[363.036px] shrink-0 -scale-x-100 opacity-[0.15]"
-        />
+        <ScrollRotate speed={0.04} className="shrink-0">
+          <Image
+            src={asset("/quote-flower.svg")}
+            alt=""
+            width={363}
+            height={348}
+            unoptimized
+            className="h-[347.597px] w-[363.036px] opacity-[0.15]"
+          />
+        </ScrollRotate>
+        <ScrollRotate speed={-0.04} className="shrink-0">
+          <Image
+            src={asset("/quote-flower.svg")}
+            alt=""
+            width={363}
+            height={348}
+            unoptimized
+            className="h-[347.597px] w-[363.036px] -scale-x-100 opacity-[0.15]"
+          />
+        </ScrollRotate>
       </div>
 
       <div className="relative mx-auto flex w-full max-w-[639px] flex-col items-center gap-4 text-center lg:gap-[20px]">
@@ -53,7 +58,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
               height={24}
               unoptimized
               aria-hidden="true"
-              className="h-5 w-7 mix-blend-multiply sm:h-6 sm:w-9"
+              className="h-5 w-7 sm:h-6 sm:w-9"
             />
           </span>
           <p
@@ -74,7 +79,7 @@ export function QuoteBanner({ dict }: { dict: Dictionary }) {
               height={24}
               unoptimized
               aria-hidden="true"
-              className="h-5 w-7 -scale-x-100 mix-blend-multiply sm:h-6 sm:w-9"
+              className="h-5 w-7 -scale-x-100 sm:h-6 sm:w-9"
             />
           </span>
         </div>
