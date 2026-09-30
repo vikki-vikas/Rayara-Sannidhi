@@ -17,18 +17,18 @@ const row2 = [
   { src: '/figma/gallery-5.png', width: 516, alt: 'Gallery image 5' },
   { src: '/figma/gallery-6.png', width: 309, alt: 'Gallery image 6' },
   { src: '/figma/gallery-7.png', width: 298, alt: 'Gallery image 7' },
+  { src: '/figma/gallery17.jpeg', width: 247, alt: 'Gallery image 8' },
 ];
 
 // Third desktop row — all portraits, widths sized to each image's natural
 // aspect ratio at ROW_HEIGHT (≈ 439 × w/h).
 const row3 = [
-  { src: '/figma/gallery11.jpeg', width: 247, alt: 'Gallery image 8' },
-  { src: '/figma/gallery12.jpeg', width: 247, alt: 'Gallery image 9' },
-  { src: '/figma/gallery13.jpeg', width: 256, alt: 'Gallery image 10' },
-  { src: '/figma/gallery14.jpeg', width: 312, alt: 'Gallery image 11' },
-  { src: '/figma/gallery15.jpeg', width: 329, alt: 'Gallery image 12' },
-  { src: '/figma/gallery16.jpeg', width: 329, alt: 'Gallery image 13' },
-  { src: '/figma/gallery17.jpeg', width: 247, alt: 'Gallery image 14' },
+  { src: '/figma/gallery11.jpeg', width: 247, alt: 'Gallery image 9' },
+  { src: '/figma/gallery12.jpeg', width: 247, alt: 'Gallery image 10' },
+  { src: '/figma/gallery13.jpeg', width: 256, alt: 'Gallery image 11' },
+  { src: '/figma/gallery14.jpeg', width: 312, alt: 'Gallery image 12' },
+  { src: '/figma/gallery15.jpeg', width: 329, alt: 'Gallery image 13' },
+  { src: '/figma/gallery16.jpeg', width: 329, alt: 'Gallery image 14' },
 ];
 
 type Tile = (typeof row1)[number];
@@ -41,13 +41,13 @@ const allTiles: Tile[] = [
   { src: '/figma/gallery-5.png', width: 1, alt: 'Gallery image 5' },
   { src: '/figma/gallery-6.png', width: 1, alt: 'Gallery image 6' },
   { src: '/figma/gallery-7.png', width: 1, alt: 'Gallery image 7' },
-  { src: '/figma/gallery11.jpeg', width: 1, alt: 'Gallery image 8' },
-  { src: '/figma/gallery12.jpeg', width: 1, alt: 'Gallery image 9' },
-  { src: '/figma/gallery13.jpeg', width: 1, alt: 'Gallery image 10' },
-  { src: '/figma/gallery14.jpeg', width: 1, alt: 'Gallery image 11' },
-  { src: '/figma/gallery15.jpeg', width: 1, alt: 'Gallery image 12' },
-  { src: '/figma/gallery16.jpeg', width: 1, alt: 'Gallery image 13' },
-  { src: '/figma/gallery17.jpeg', width: 1, alt: 'Gallery image 14' },
+  { src: '/figma/gallery17.jpeg', width: 1, alt: 'Gallery image 8' },
+  { src: '/figma/gallery11.jpeg', width: 1, alt: 'Gallery image 9' },
+  { src: '/figma/gallery12.jpeg', width: 1, alt: 'Gallery image 10' },
+  { src: '/figma/gallery13.jpeg', width: 1, alt: 'Gallery image 11' },
+  { src: '/figma/gallery14.jpeg', width: 1, alt: 'Gallery image 12' },
+  { src: '/figma/gallery15.jpeg', width: 1, alt: 'Gallery image 13' },
+  { src: '/figma/gallery16.jpeg', width: 1, alt: 'Gallery image 14' },
 ];
 
 function GalleryRow({ tiles }: { tiles: Tile[] }) {
