@@ -28,6 +28,7 @@ const row3 = [
   { src: '/figma/gallery14.jpeg', width: 312, alt: 'Gallery image 11' },
   { src: '/figma/gallery15.jpeg', width: 329, alt: 'Gallery image 12' },
   { src: '/figma/gallery16.jpeg', width: 329, alt: 'Gallery image 13' },
+  { src: '/figma/gallery17.jpeg', width: 247, alt: 'Gallery image 14' },
 ];
 
 type Tile = (typeof row1)[number];
@@ -46,6 +47,7 @@ const allTiles: Tile[] = [
   { src: '/figma/gallery14.jpeg', width: 1, alt: 'Gallery image 11' },
   { src: '/figma/gallery15.jpeg', width: 1, alt: 'Gallery image 12' },
   { src: '/figma/gallery16.jpeg', width: 1, alt: 'Gallery image 13' },
+  { src: '/figma/gallery17.jpeg', width: 1, alt: 'Gallery image 14' },
 ];
 
 function GalleryRow({ tiles }: { tiles: Tile[] }) {
